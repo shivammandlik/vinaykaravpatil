@@ -1,0 +1,306 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+    <style type="text/css">
+        *,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+.div1{
+height: 0px;
+width: 70%;
+border: 2px solid black;
+
+}
+.div2{
+height: 0px;
+width: 70%;
+border: 2px solid black;
+margin-top: 90px;
+}
+.div3{
+    height: 84%;
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px pink;
+    background-color: yellow;
+    border-radius: 8px;
+    color: black;
+    background-attachment: fixed;
+    margin-top: 40px;
+    margin-left: 20px;
+   
+
+}
+.foter{
+    height: 240px;
+    width: 100%;
+/*    border: 2px solid black;*/
+    background-color: hsl(165, 100%, 20%);
+    margin-top: 10px;
+}
+.div4{
+    margin-left: 40%;
+    margin-top: -160px;
+    line-height: 30px;
+    color: white;
+    
+}
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+      <h1 style="text-align: center; background-color:greenyellow;">मराठवाडा शिक्षण प्रसारक मंडळाचे
+विनायकराव पाटील महाविद्यालय, वैजापूर</h1><br>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/vpc_logo-pdc4ot8ug1xokqtpau18g0wrdq18pq5gavj4j4jvq4.png" style="height: 60px;width: 60px;margin-right: 200px;">
+            <ul class="menu-items">
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar1.html">Home</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar2.html">About</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar3.htm">Associations</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/treningplacement.html">Placement Cell</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html">Library</a></li>
+        
+            
+      <ul>
+
+      </nav><br><br><br><br>
+      <center>   <div class="div1">
+      </div><br><br><br>
+      <h1 style="margin-right: 860px;color: black;font-size: 38px;">Associations</h1>
+      </center>
+      <center>   <div class="div2">
+      </div>
+      </center>
+      <div class="div3 animate__animated animate__lightSpeedInLeft">
+        <h2 style="margin-left: 20px;margin-top: 20px;font-size: 30px;color: red;">Literary Association:</h2><br><br>
+    <h4 style="margin-left:40px;font-size: 20px;color:red;">Introduction:</h4><br><br>
+    <li style="margin-left: 70px;font-family: Trirong, serif; font-size:25px">‘A word after a word after a word is power.’ --Margaret Atwood</li>
+
+<p style="line-height: 45px;  font-family: Trirong, serif;text-align: justify;">Vinayakrao Patil Mahavidyalaya, Vaijapur strives to realize the mission ofseeking overall personality development of the students through extra-curricular and co- curricular activities. The rural students who live in the midst of nature have great communion with the rustic phenomena. The Literary Association was established in 1968 and has been a vibrant organ for giving exposure to creative potentials of the students. ‘The soil of Vaijapur has latent literary instinct’ remarks the veteran man of letter and former President, Sahitya-SanskrutiMahamandal, Maharashtra State, R. R. Borade. He served in this institute as Principal for 20 years and laid the foundation of the literary culture. He was instrumental in inventing a new genre ‘Rural Marathi Short Story’ that has been the mainstay in the contemporary literature.Following the legacy, a host of other writers emerged and blossomed the literary field: Bhaskar Chandanshiv, Bhimrao Waghchoure, SuhasiniIrlekar, Mahesh Kharat, LalitAdhane lead the literary front today with their local color. The books written by these writers have been prescribed in the curriculum of many Universities.
+</p>
+<img src="https://vpcollege.org/wp-content/uploads/2022/11/12-300x225.jpg" style="margin-left: 880px;margin-top: -600px;width: 500px;height:500px;border-radius: 8px; box-shadow: 2px 2px 2px 2px black;">
+      </div>
+      <div class="foter">
+    <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/cropped-vpc_logo-pdg6trxdben7xv9qvobkl6mq9agtknk7hyyjxgqfxc.png"style="margin: 10px;margin-left: 90px;">
+     <p style="margin-left: 70px;color: yellow;">M. S. P. Mandal’s  </p>   
+    <h4 style="margin-left:70px;color: white;">Vinayakrao Patil <br>Mahavidyalaya, Vaijapur,Dist. <br>Chhatrapati Sambhajinagar</h4>
+    <p style="margin-left:60px;color: cyan;">Email: vpcvaijapur@gmail.com, </p>
+
+</div>
+<p style="margin-left:40%;margin-top: -190px;float: left;color: yellow;">QUICK LINKS</p>
+
+<div class="div4">
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/IQEC.html">IQAC</a></li>
+<!-- <li><a style="color: white; " href="Library">Library</a></li> -->
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/nattionintutution.html">NIRF</a></li>
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/IQEC.html">Feedback</a></li>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.0810476122848!2d74.71113150510293!3d19.932246241291555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc6f5de3b3c6d7%3A0xff837bf3f779951d!2sVinayakrao%20Patil%20Mahavidyalaya%2C%20Vaijapur!5e0!3m2!1sen!2sin!4v1722930452251!5m2!1sen!2sin" width="350" height="190"style="margin-left: 70%;margin-top: -160px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<h4 style="margin-left:75%;font-size: 20px;color: yellow;margin-top: -220;">OurLocation</h4>
+</ul>
+</ul>
+</div>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.0810476122848!2d74.71113150510293!3d19.932246241291555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc6f5de3b3c6d7%3A0xff837bf3f779951d!2sVinayakrao%20Patil%20Mahavidyalaya%2C%20Vaijapur!5e0!3m2!1sen!2sin!4v1722930452251!5m2!1sen!2sin" width="350" height="190"style="margin-left: 160%;margin-top: -160px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+
+</body>
+</html>

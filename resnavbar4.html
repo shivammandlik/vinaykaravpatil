@@ -1,0 +1,334 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style type="text/css">
+        *,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+/*    position: fixed;*/
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+.div1{
+
+width: 80%;
+border: 2px solid black;
+margin-top: 70px;
+margin-left: 120px;
+
+}
+.div2{
+
+width: 80%;
+border: 2px solid black;
+margin-top: 70px;
+margin-left: 120px;
+
+}
+.para1{
+
+height: 450px;
+width: 75%;
+/*border:2px solid black;*/
+margin-top: 40px;
+margin-left: 250px;
+ font-family: Trirong, serif;
+
+
+
+}
+
+.line{
+width: 80%;
+border: 2px solid green;
+margin-left:10%;
+margin-top: -30px;
+
+
+}
+.foter1{
+    height: 240px;
+    width: 100%;
+/*    border: 2px solid black;*/
+    background-color: hsl(165, 100%, 20%);
+    margin-top: 20px;
+
+}
+.div4{
+    margin-left:40%;
+    margin-top: -160px;
+    line-height: 30px;
+    color: white;
+    }
+
+.button{
+    height: 300px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: white;
+   margin-top: -630px;
+   margin-left: 20px;
+   line-height: 75px;
+   text-align: center;
+   background-color: white;
+   box-shadow: 4px 4px 4px 4px black;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+     <h1 style="text-align: center; background-color:greenyellow;">मराठवाडा शिक्षण प्रसारक मंडळाचे
+विनायकराव पाटील महाविद्यालय, वैजापूर</h1>
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar1.html">Home</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar2.html">About</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar3.html">Associations</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/treningplacement.html">Placement Cell</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html">Library</a></li>
+                
+            </ul>
+           <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/vpc_logo-pdc4ot8ug1xokqtpau18g0wrdq18pq5gavj4j4jvq4.png" style="height: 100px;width: 100px; margin-bottom: 10px;">
+        </div>
+            </nav><br><br><br><br>
+
+        <div class="div1">
+        </div><br><br><br><br>
+<h1 style="margin-left: 120px;">Training and Placement Cell</h1>
+
+        <div class="div2">
+        </div>
+      <!-- <a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar4.html">  <button style="margin-top: 50px;margin-left: 50px;height: 50px;width: 160px;cursor: pointer;background-color: green;color: white;font-size: 26px;">About Us</button></a> -->
+
+        <h2 style="margin-top:20px;margin-left: 17%;color: red;">Introduction</h2>
+        <div class="para1">
+      <p style="justify-content: space-between;">  
+Vinayakrao Patil Mahavidyalaya, Vaijapur has internalized the practice of training and placing students in various companies. Initially, there were a host of challenges and instead of crying over them, we explored the hidden opportunities in the set up. The first mission of the college is to make the rural youth self-reliant and develop leadership traits in them.<br><br>
+The fact that Vaijapur Tehsil which comprises of 150 drought-prone villages deprives it of progress even after 70 years of independence. Since its establishment in 1968, the college has been the centre of social, cultural and economic transformation. True to its spirit, the students passing out from this college secured jobs in the field like teaching, banking, law, defence, police depts. other government and private sectors. Large was the number of students who preferred to experimental farming which has been their family occupation. A good chunk of these students started their own business as well. The scenario got changed after the 1995 when LPG was accepted and the job equation got changed. So there was a dire need to address the issues arising out of the new era.<br><br>
+In the new scenario, jobs were plenty but required skills. In adherence to the mission of the institute efforts, though, crude, were sporadically since 2006. As a part of this paradigm shift we introduced programmes like BBA, BCA, BCS, Biotechnology, Spoken English, Computer Hardware and Networking etc. As these programmes have scope for employment. Apart from the new courses, we realized that skill training was the crux of the problem. That realization was the real beginning.<br><br>
+The first major fillip was given in 2016 when there was a overhauling in the policy and the Training and Placement Cell had its real meaningful existence. In that year we conducted Affirmative Action Programme under the aegis of Tata Consultancy Services. It was a 100 hour training programme that covered components like soft skills, GD, logical reasoning, written communication etc. At the end of the programme 07 students got placed in TCS. This boosted our confidence and so we expanded the canvass of our activities. Similar programmes were conducted consistently and by August the Training and Placement Cell completed 18 training programmes and trained 1025 students. In our in-campus placement drives 125 students have been placed in various companies. The number of students who benefitted from these activities and got placed by approaching various employers is 412. The silver lining is that most of the students that we train and place belong to SC/ST/OBC/Miniority/Women/BPL/Students located in far flung areas. Training and Placement has been accorded a top priority in the campus today. The Training and Placement Cell has got facilities like a well-equipped office, lab, audio-visual classroom, small library etc. The cell is working with the motto ‘100% Training and 100% Placement’.
+        </p>
+</div>
+              <!-- <a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/treningplacement.html">  <button style="height: 70px;width: 200px;cursor: pointer;color: black;font-size: 20px;margin-top: -460px;margin-left: 34px;border: none;">Aims and objectives</button></a> -->
+
+<div class="line">
+
+</div>
+<div class="foter1">
+    <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/cropped-vpc_logo-pdg6trxdben7xv9qvobkl6mq9agtknk7hyyjxgqfxc.png"style="margin: 10px;margin-left: 730px;">
+     <p style="margin-left: 720px;color: yellow;">M. S. P. Mandal’s  </p>   
+    <h4 style="margin-left:720px;color: white;">Vinayakrao Patil <br>Mahavidyalaya, Vaijapur,Dist. <br>Chhatrapati Sambhajinagar</h4>
+    <p style="margin-left:720px;color: cyan;">Email: vpcvaijapur@gmail.com, </p>
+
+</div>
+
+
+
+
+
+
+
+<div class="button">
+     <ul>
+<li style="color: white;"><a style="color: black;    text-decoration: none;"href="C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html">About</a></li>
+<li style="color: white;"><a style="color: black;    text-decoration: none;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/assocommity.html">Committee</a></li>
+<li style="color: white;"><a style="color: black;    text-decoration: none;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/staf.html">Staff</a></li>
+</ul>
+</div>
+
+
+
+   <!-- <a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/staf.html"> <button style="height:50px;width: 160px;margin-top: -580px;margin-left: -1150px;font-size: 20px;border: none;background-color: gray;cursor: pointer;">Staff</button></a> -->
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style type="text/css">
+        *,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+/*    position: fixed;*/
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
+}
+.div1{
+
+width: 80%;
+border: 2px solid black;
+margin-top: 70px;
+margin-left: 120px;
+
+}
+.div2{
+
+width: 80%;
+border: 2px solid black;
+margin-top: 70px;
+margin-left: 120px;
+
+}
+.para2{
+    height: 400px;
+    width: 70%;
+    margin-left: 250px;
+}
+.line{
+width: 100%;
+border: 2px solid green;
+margin-left:0%;
+margin-top: -0px;
+
+}
+
+.foter1{
+    height: 240px;
+    width: 100%;
+/*    border: 2px solid black;*/
+    background-color: hsl(165, 100%, 20%);
+    margin-top: 20px;
+}
+.div4{
+    margin-left:40%;
+    margin-top: -130px;
+    line-height: 30px;
+    color: white;
+    
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: -40px;
+    width: 80%;
+    height: 80%;
+
+}
+table,tr{
+    text-align: center;
+    font-size: 20px;
+}
+div.gallery {
+  margin: 5px;
+/*  border: 1px solid #ccc;*/
+  float: left;
+  width: 200px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 20px;
+  text-align: center;
+}
+.button{
+    height: 300px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: white;
+    margin-top: -330px;
+    margin-left: -870px;
+    line-height: 80px;
+    text-align: center;
+    box-shadow: 4px 4px 4px black ;
+}
+
+
+
+</style>
+
+
+<body>
+     <h1 style="text-align: center; background-color:greenyellow;">मराठवाडा शिक्षण प्रसारक मंडळाचे
+विनायकराव पाटील महाविद्यालय, वैजापूर</h1>
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar1.html">Home</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar2.html">About</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/resnavbar3.html">Associations</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/treningplacement.html">Placement Cell</a></li>
+                <li><a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html">Library</a></li>
+            
+            </ul>
+           <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/vpc_logo-pdc4ot8ug1xokqtpau18g0wrdq18pq5gavj4j4jvq4.png" style="height: 100px;width: 100px; margin-bottom: 10px;">
+        </div>
+            </nav><br><br>
+            <div class="div1">
+        </div><br><br><br><br>
+<h1 style="margin-left: 120px;word-spacing: 40px;font-size: 40px;text-align: center;">Library <span style="color: green;"> ग्रंथालय</span></h1>
+
+        <div class="div2">
+        </div>
+        <!-- <a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html"> <button style="margin-top: 40px;margin-left: 15px;height: 60px;width: 190px;cursor: pointer;background-color: green;color: white;font-size: 26px;">About Us</button></a> -->
+
+
+        <div class="para2">
+           <div class="gallery">
+  <a target="_blank" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKu5fczW0H-JUtOKK9M_eYm7-uNM7QDLxLiwIExucWZwxKqXGVuFDw_uNQpjc0o9vflqN7bi0NP31xuTVm7osI04y25C06ZL2IO_bWQ7AaH09Z73JPJbGwtO1uhDug4PnuxdTLwH_Om7QQUUS6x0O5Wmrhp5P_EVoKmEDeWMg-uzsifVYnLpGs58hZ/s1600/Sawai.jpg">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKu5fczW0H-JUtOKK9M_eYm7-uNM7QDLxLiwIExucWZwxKqXGVuFDw_uNQpjc0o9vflqN7bi0NP31xuTVm7osI04y25C06ZL2IO_bWQ7AaH09Z73JPJbGwtO1uhDug4PnuxdTLwH_Om7QQUUS6x0O5Wmrhp5P_EVoKmEDeWMg-uzsifVYnLpGs58hZ/s1600/Sawai.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Dr.  A. B. Sawai
+Librarian 
+MLISc. Ph.D.
+Mob. 8087484788
+</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihJ8OneOvHnKcJBeNz76a3vG-1-8mRfy47AJWU7oN2SMr1UBwAdEr8ts0syy4AvvLiqY3N0rp_ePsFym3-Y-T0uqWcIAVA0frL-ShzEYIn0T9alRibJbgp-u7f7BG32Uycu3V31Cta1iGU1VpcgYIQYCaH2gzoTUYvAyGBTWtjHQHV7iiS4QzwNZD0/s1600/Patil.jpg">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihJ8OneOvHnKcJBeNz76a3vG-1-8mRfy47AJWU7oN2SMr1UBwAdEr8ts0syy4AvvLiqY3N0rp_ePsFym3-Y-T0uqWcIAVA0frL-ShzEYIn0T9alRibJbgp-u7f7BG32Uycu3V31Cta1iGU1VpcgYIQYCaH2gzoTUYvAyGBTWtjHQHV7iiS4QzwNZD0/s1600/Patil.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Smt. M. V. Patil
+Assistant Librarian
+M.A. Mar. & MLISc.
+Mo. 9763859599
+</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3o6wyHKj8NQ6AlPulnSeq5S9LIkQ1CXEFEKXn9hGZIq7JmnhtaxrZ1guyL3DQPTT6V9AUYMedQuOu6yxhRJIjTbzIdq0UKUJ8YKeq8vdK2yULWPEC2v3KeQDzbQuyAwyZg6SqjL2HhiFiPAC2qhqEwexjo6AdmE52vNKGEG-qju4MMYYcCy5SZpeR/w135-h172/Bhavar%20Tatya.jpg">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3o6wyHKj8NQ6AlPulnSeq5S9LIkQ1CXEFEKXn9hGZIq7JmnhtaxrZ1guyL3DQPTT6V9AUYMedQuOu6yxhRJIjTbzIdq0UKUJ8YKeq8vdK2yULWPEC2v3KeQDzbQuyAwyZg6SqjL2HhiFiPAC2qhqEwexjo6AdmE52vNKGEG-qju4MMYYcCy5SZpeR/w135-h172/Bhavar%20Tatya.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Shri. P. S. Bhavar
+Library Clerk
+Mo. 8007412509</div>
+</div>
+
+
+
+
+<div class="gallery">
+  <a target="_blank" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyVBLVMkacnkhpbVoYRRApgulgTJ6Kska6mGchwocCR0_YJkttHXmtGi3PBCpW56PLPyL6eUc0AypNj4qsYod5LYV0YAt4D1FzO7iMkJOhQrUl19nuqbRkQYp7axTc5Cy6KuSS3DflZiW7d_4JZ8oXg7uSaHFlAlBGLAuEGPmjvUC_WM31uyIKUc8Q/w143-h175/Yogesh.jpg">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyVBLVMkacnkhpbVoYRRApgulgTJ6Kska6mGchwocCR0_YJkttHXmtGi3PBCpW56PLPyL6eUc0AypNj4qsYod5LYV0YAt4D1FzO7iMkJOhQrUl19nuqbRkQYp7axTc5Cy6KuSS3DflZiW7d_4JZ8oXg7uSaHFlAlBGLAuEGPmjvUC_WM31uyIKUc8Q/w143-h175/Yogesh.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Shri Y. N. Ghuge
+Library Clerk
+Mo. 9421950127
+ </div><br><br><br><br>
+ <div class="button">
+     <ul>
+<li style="color: white;"><a style="color: black;    text-decoration: none;"href="C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/library.html">About</a></li>
+<li style="color: white;"><a style="color: black;    text-decoration: none;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/assocommity.html">Committee</a></li>
+<li style="color: white;"><a style="color: black;    text-decoration: none;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/staf.html">Staff</a></li>
+</ul>
+</div>
+
+</div>
+
+</div>
+<!-- <div class="gallery" style="margin-top: 50px;margin-left: -190px;">
+  <a target="_blank" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVaIWeYn3CN7toafMEELgtSt8D9k5JWw2_3HItNWnqrdGtJ_nKR0U81NObV8Yizb6Arprcgej3aCHDd2O1hY_SzMDkHi4eqylWSBTl7jZ4C-LXK2fzpqfEKs4tXn4I3MtYqYroA2aWdOGTfO6Ud3EvKA6M4xsmk13csuaq6c79lJUrOviAzYhPbNW-/w135-h159/Autade.jpg">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVaIWeYn3CN7toafMEELgtSt8D9k5JWw2_3HItNWnqrdGtJ_nKR0U81NObV8Yizb6Arprcgej3aCHDd2O1hY_SzMDkHi4eqylWSBTl7jZ4C-LXK2fzpqfEKs4tXn4I3MtYqYroA2aWdOGTfO6Ud3EvKA6M4xsmk13csuaq6c79lJUrOviAzYhPbNW-/w135-h159/Autade.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Shri. V.M. Autade
+Library Attendant
+Mo. 9420409432</div>
+</div> -->
+
+
+
+ <!-- <a href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/treningplacement.html">  <button style="height: 60px;width: 230px;cursor: pointer;color: black;font-size: 15px;margin-top: 20px;margin-left:-1300px;border: none;padding: 20px;color: white;background-color: gray;"> ADVISORY COMMITTEE
+</button></a> -->
+
+
+
+ </div><br><br>
+ <div class="line">
+
+
+
+
+ 
+   <div class="foter1">
+    <img src="https://vpcollege.org/wp-content/uploads/elementor/thumbs/cropped-vpc_logo-pdg6trxdben7xv9qvobkl6mq9agtknk7hyyjxgqfxc.png"style="margin: 10px;margin-left: 90px;">
+     <p style="margin-left: 70px;color: yellow;">M. S. P. Mandal’s  </p>   
+    <h4 style="margin-left:70px;color: white;">Vinayakrao Patil <br>Mahavidyalaya, Vaijapur,Dist. <br>Chhatrapati Sambhajinagar</h4>
+    <p style="margin-left:60px;color: cyan;">Email: vpcvaijapur@gmail.com, </p>
+
+</div>
+<div class="div4">
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/IQEC.html">IQAC</a></li>
+<!-- <li><a style="color: white; " href="Library">Library</a></li> -->
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/nattionintutution.html">NIRF</a></li>
+<li><a style="color: white;" href="file:///C:/Users/HP/OneDrive/Desktop/shivam%20mandlik/IQEC.html">Feedback</a></li>
+</div>
+</ul>
+</ul>
+</div>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.0810476122848!2d74.71113150510293!3d19.932246241291555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc6f5de3b3c6d7%3A0xff837bf3f779951d!2sVinayakrao%20Patil%20Mahavidyalaya%2C%20Vaijapur!5e0!3m2!1sen!2sin!4v1722930452251!5m2!1sen!2sin" width="350" height="180"style="margin-left: 1000px;margin-top: -185px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <h4 style="margin-left:80%;font-size: 20px;color: red;margin-top: -226px;">OurLocation</h4>
+
+</body>
+
+</html>
+
+
+<h4 style="margin-left:40%;margin-top: 30px;float: left;color: yellow;">QUICK LINKS</h4>
+
+
+
+</body>
+
+</html> -->
